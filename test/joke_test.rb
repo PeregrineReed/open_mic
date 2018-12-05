@@ -14,4 +14,8 @@ class JokeTest < Minitest::Test
     assert_instance_of Joke, @joke_1
   end
 
+  def test_it_has_an_id
+    assert_equal 1, @joke_1.id
+  end
+
 end
