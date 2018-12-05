@@ -17,4 +17,10 @@ class User
     audience.jokes << joke
   end
 
+  def joke_by_id(id)
+    jokes.find do |joke|
+      joke.id == id
+    end
+  end
+
 end
