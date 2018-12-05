@@ -32,4 +32,10 @@ class OpenMicTest < Minitest::Test
     assert_empty @open_mic.performers
   end
 
+  def test_it_welcomes_performers
+    @open_mic.welcome(@sal)
+    @open_mic.welcome(@ali)
+    assert_equal [@sal, @ali], @open_mic.performers
+  end
+
 end
