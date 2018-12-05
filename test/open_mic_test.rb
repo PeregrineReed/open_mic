@@ -28,4 +28,8 @@ class OpenMicTest < Minitest::Test
     assert_equal "11-20-18", @open_mic.date
   end
 
+  def test_it_has_room_for_performers
+    assert_empty @open_mic.performers
+  end
+
 end
