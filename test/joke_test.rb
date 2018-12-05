@@ -18,4 +18,8 @@ class JokeTest < Minitest::Test
     assert_equal 1, @joke_1.id
   end
 
+  def test_it_has_a_setup
+    assert_equal "Why did the strawberry cross the road?", @joke_1.setup
+  end
+
 end
