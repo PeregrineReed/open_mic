@@ -38,4 +38,12 @@ class OpenMicTest < Minitest::Test
     assert_equal [@sal, @ali], @open_mic.performers
   end
 
+  def test_repeated_jokes_are_recognized
+    @ali.learn(@joke_1)
+    @ali.learn(@joke_2)
+    assert_equal false, @open_mic.repeated_jokes?
+    @ali.tell(@sal, @joke_1)
+    assert_equal true, @open_mic.repeated_jokes?
+  end
+
 end
