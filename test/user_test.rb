@@ -35,4 +35,10 @@ class UserTest < Minitest::Test
     assert_equal true, all_jokes
   end
 
+  def test_it_can_tell_jokes
+    @sal.tell(@ali, @joke_1)
+    @sal.tell(@ali, @joke_2)
+    assert_equal [@joke_1, @joke_2], @ali.jokes
+  end
+
 end
