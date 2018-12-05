@@ -18,4 +18,8 @@ class UserTest < Minitest::Test
     assert_equal "Sal", @sal.name
   end
 
+  def test_it_has_jokes
+    assert_empty @sal.jokes
+  end
+
 end
