@@ -20,4 +20,8 @@ class OpenMicTest < Minitest::Test
     assert_instance_of OpenMic, @open_mic
   end
 
+  def test_it_has_a_location
+    assert_equal "Comedy Works", @open_mic.location
+  end
+
 end
